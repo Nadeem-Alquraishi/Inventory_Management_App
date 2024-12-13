@@ -6,8 +6,6 @@ import 'package:inventory_app/core/constant/app_theme.dart';
 import 'package:inventory_app/features/items/presentation/pages/home.dart';
 
 void main() {
-  
-  InventoryBinding().dependencies();
   runApp(const InventoryApp());
 }
 

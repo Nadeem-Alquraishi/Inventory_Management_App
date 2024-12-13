@@ -2,7 +2,7 @@
 import 'dart:convert';
 
 class ItemEntity {
-   String? COMAPNYNO;
+  String? COMAPNYNO;
   String? STOCKCODE;
   String? ItemOCode;
   String? QTY;

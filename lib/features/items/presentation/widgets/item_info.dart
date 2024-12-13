@@ -36,6 +36,7 @@ class ItemInfo extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.all(20),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(12),
@@ -57,44 +58,55 @@ class ItemInfo extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                Card(
-                  elevation: 3,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Quantity: ${item.QTY ?? 'N/A'}',
-                          style: TextStyle(
-                              fontSize: deviceWidth * 0.045,
-                              color: Colors.black87),
-                        ),
-                        SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.02),
-                        Text(
-                          'Barcode: ${item.BARCODE ?? 'N/A'}',
-                          style: TextStyle(
-                              fontSize: deviceWidth * 0.045,
-                              color: Colors.black87),
-                        ),
-                        SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.02),
-                        Container(
-                          padding: const EdgeInsets.all(10),
-                          decoration: BoxDecoration(
-                            color: Colors.orange.shade100,
-                            borderRadius: BorderRadius.circular(8),
+                SizedBox(
+                  width: double.infinity,
+                  child: Card(
+                    elevation: 3,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Quantity: ${item.QTY ?? 'N/A'}',
+                            style: TextStyle(
+                                fontSize: deviceWidth * 0.045,
+                                color: Colors.black87),
                           ),
-                          child: Text(
-                            'Price: ${item.MINPRICE ?? 'N/A'}',
-                            style: TextStyle(fontSize: deviceWidth * 0.04),
+                          SizedBox(
+                              height:
+                                  MediaQuery.of(context).size.height * 0.02),
+                          Text(
+                            'Barcode: ${item.BARCODE ?? 'N/A'}',
+                            style: TextStyle(
+                                fontSize: deviceWidth * 0.045,
+                                color: Colors.black87),
                           ),
-                        ),
-                      ],
+                          SizedBox(
+                              height:
+                                  MediaQuery.of(context).size.height * 0.02),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(10),
+                                decoration: BoxDecoration(
+                                  color: Colors.orange.shade100,
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: Text(
+                                  'Price: ${item.MINPRICE ?? 'N/A'}',
+                                  style:
+                                      TextStyle(fontSize: deviceWidth * 0.04),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

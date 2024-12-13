@@ -19,6 +19,7 @@ class ItemsPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Items'),
         backgroundColor: Colors.deepPurple,
+        foregroundColor: Colors.white,
         elevation: 4,
         shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(
@@ -38,7 +39,7 @@ class ItemsPage extends StatelessWidget {
         child: Obx(() {
           if (controller.isLoading.value) {
             return const Center(
-                child: CircularProgressIndicator(color: Colors.white));
+                child: CircularProgressIndicator(color: Colors.deepPurple));
           }
 
           if (controller.inventoryData.isEmpty) {
