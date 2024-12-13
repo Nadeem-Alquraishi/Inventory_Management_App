@@ -34,19 +34,19 @@ class ItemInfo extends StatelessWidget {
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Padding(
-            padding: const EdgeInsets.all(20),
+            padding: EdgeInsets.all(20),
             child: Column(
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(12),
                   child: Image.network(
-                    'https://picsum.photos/200/300', // replace with your image source if available
+                    'https://picsum.photos/200/300',
                     width: double.infinity,
-                    height: 200,
+                    height: MediaQuery.of(context).size.height * 0.3,
                     fit: BoxFit.cover,
                   ),
                 ),
-                const SizedBox(height: 20),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                 Text(
                   'Item Name: ${item.NAME ?? 'Name'}',
                   style: TextStyle(

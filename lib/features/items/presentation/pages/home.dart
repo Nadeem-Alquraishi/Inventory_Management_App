@@ -8,7 +8,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Fetch screen size for responsiveness
     final screenSize = MediaQuery.of(context).size;
 
     return Scaffold(
@@ -17,7 +16,7 @@ class HomePage extends StatelessWidget {
           'Home',
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: screenSize.width * 0.06, // Scalable font size
+            fontSize: screenSize.width * 0.06,
           ),
         ),
         backgroundColor: Colors.deepPurple,
@@ -28,10 +27,9 @@ class HomePage extends StatelessWidget {
             return Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Scalable Button
                 SizedBox(
-                  width: constraints.maxWidth * 0.6, // 60% of screen width
-                  height: constraints.maxHeight * 0.08, // 8% of screen height
+                  width: constraints.maxWidth * 0.6,
+                  height: constraints.maxHeight * 0.08,
                   child: ButtonStander(
                     onTap: () {
                       Get.to(() => ItemsPage());

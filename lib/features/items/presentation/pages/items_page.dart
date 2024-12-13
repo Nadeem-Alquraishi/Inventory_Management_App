@@ -72,8 +72,6 @@ class ItemsPage extends StatelessWidget {
                             horizontal: 16, vertical: 12),
                         child: Row(
                           children: [
-                            // Optionally, you can use a Hero widget if you have an image
-                            // for the item. For now, just a simple icon:
                             CircleAvatar(
                               backgroundColor: Colors.deepPurple.shade100,
                               child: const Icon(Icons.inventory,
@@ -88,8 +86,7 @@ class ItemsPage extends StatelessWidget {
                                     item.NAME ?? 'Unnamed Item',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: deviceWidth *
-                                          0.05, // Responsive text size
+                                      fontSize: deviceWidth * 0.05,
                                       color: Colors.black87,
                                     ),
                                   ),
@@ -97,8 +94,7 @@ class ItemsPage extends StatelessWidget {
                                   Text(
                                     'Quantity: ${item.QTY ?? 0}',
                                     style: TextStyle(
-                                      fontSize: deviceWidth *
-                                          0.04, // Responsive text size
+                                      fontSize: deviceWidth * 0.04,
                                       color: Colors.grey[700],
                                     ),
                                   ),
